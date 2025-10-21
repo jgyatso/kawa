@@ -41,26 +41,5 @@
     <p>&copy; 2025 Kawa Tech Solutions. All rights reserved.</p>
   </footer>
 
-  <script>
-    document.getElementById('registerForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const username = document.getElementById('registerUsername').value;
-      const password = document.getElementById('registerPassword').value;
-      localStorage.setItem(username, password);
-      document.getElementById('message').textContent = 'Registration successful!';
-    });
-
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const username = document.getElementById('loginUsername').value;
-      const password = document.getElementById('loginPassword').value;
-      const storedPassword = localStorage.getItem(username);
-      if (storedPassword === password) {
-        document.getElementById('message').textContent = 'Login successful!';
-      } else {
-        document.getElementById('message').textContent = 'Invalid credentials!';
-      }
-    });
-  </script>
 </body>
 </html>
